@@ -10,6 +10,10 @@ const publicPath = path.join(__dirname, "client", "build");
 
 app.use(express.static(publicPath));
 
+app.get("/api/test", (req, res) => {
+  console.log("api/test");
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
