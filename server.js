@@ -12,6 +12,7 @@ app.use(express.static(publicPath));
 
 app.get("/api/test", (req, res) => {
   console.log("api/test");
+  res.send("/api/test is working.");
 });
 
 app.get("*", (req, res) => {
